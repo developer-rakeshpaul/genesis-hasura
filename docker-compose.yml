@@ -26,7 +26,7 @@ services:
       # Default: "https://acme-v02.api.letsencrypt.org/directory"
       # - "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
       - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
-      - "--certificatesresolvers.myresolver.acme.email=developer.rakeshpaul@gmail.com"
+      - "--certificatesresolvers.myresolver.acme.email=youremail@somemail.com"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
 
     ports:

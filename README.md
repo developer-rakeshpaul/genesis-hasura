@@ -1,2 +1,25 @@
-# genesis-hasura
+# genesis-hasura-starter
 Genesis: Hasura starter kit
+
+Hasura starter will help you setup a hasura graphql server quickly with docker. You will get a hasura graphql engine setup with postgres server supporting postgis. Two default tables user and todo are also setup with appropriate permissions. 
+
+The bundle also includes docker file to deploy hasura server using treafik reverse proxy with letsencrypt certificates
+
+### Up and running
+
+Install docker and docker-compose and start server by running
+
+```sh
+$ docker-compose -f docker-compose.dev.yml up
+```
+
+For creating default tables run
+
+```sh
+$ hasura migrate apply --envfile sample.env
+```
+
+To access hasura console run
+```sh
+$ hasura console --envfile sample.env
+```
