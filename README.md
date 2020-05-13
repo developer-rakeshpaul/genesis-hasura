@@ -27,7 +27,7 @@ To access hasura console run
 $ hasura console --envfile .env.sample
 ```
 
-To access hasura console with logleve debug
+To access hasura console with loglevel debug
 ```sh
 $ hasura console --envfile .env.sample --log-level DEBUG
 ```
