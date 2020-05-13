@@ -8,19 +8,26 @@ The bundle also includes docker file to deploy hasura server using treafik rever
 pgAdmin webapp is available at http://localhost:5050/
 ### Up and running
 
-Install docker and docker-compose and start server by running
+Install docker and docker-compose 
+
+Run development server with
 
 ```sh
-$ docker-compose -f docker-compose.dev.yml up
+$ docker-compose -f docker-compose.dev.yml --env-file=.env.sample up
 ```
 
 For creating default tables run
 
 ```sh
-$ hasura migrate apply --envfile sample.env
+$ hasura migrate apply --envfile .env.sample
 ```
 
 To access hasura console run
 ```sh
-$ hasura console --envfile sample.env
+$ hasura console --envfile .env.sample
+```
+
+To access hasura console with logleve debug
+```sh
+$ hasura console --envfile .env.sample --log-level DEBUG
 ```
