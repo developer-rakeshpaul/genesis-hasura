@@ -5,7 +5,7 @@ services:
     # image: postgres
     container_name: postgres_genesis
     restart: unless-stopped
-    env_file: .env
+    env_file: sample.env
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
@@ -24,6 +24,7 @@ services:
   hasura:
     image: hasura/graphql-engine:v1.2.1
     container_name: hasura_genesis
+    env_file: sample.env
     ports:
       - ${HASURA_GRAPHQL_SERVER_PORT}:${HASURA_GRAPHQL_SERVER_PORT}
     depends_on:
@@ -69,7 +70,6 @@ services:
       - backend
 volumes:
   db_data:
-  redis_data:
   pgadmin:
 networks:
   web:

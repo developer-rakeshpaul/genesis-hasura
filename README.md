@@ -5,6 +5,7 @@ Hasura starter will help you setup a hasura graphql server quickly with docker. 
 
 The bundle also includes docker file to deploy hasura server using treafik reverse proxy with letsencrypt certificates
 
+pgAdmin webapp is available at http://localhost:5050/
 ### Up and running
 
 Install docker and docker-compose and start server by running
